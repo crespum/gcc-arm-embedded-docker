@@ -1,4 +1,7 @@
-FROM ubuntu:18.04
+FROM ubuntu:20.04
+
+# To avoid prompting user to configure tzdata
+ENV DEBIAN_FRONTEND=noninteractive
 
 RUN mkdir /builds && \
     apt-get update && \
